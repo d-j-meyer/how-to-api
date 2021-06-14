@@ -1,9 +1,9 @@
 #Updates an existing customer object.
 
 require 'stripe'
-Stripe.api_key = 'INSERT_STRIPE_SECRET_KEY_HERE'
+Stripe.api_key = 'INSERT_SECRET_KEY_HERE'
 
-Stripe::Customer.update(
+customer_update = Stripe::Customer.update(
   'ADD_CUSTOMER_ID_HERE',
   description: 'My First Test Customer (created for API docs)',
     address: {
@@ -16,5 +16,7 @@ Stripe::Customer.update(
   },
   email: 'notarealemail@gmail.com',
   name: 'Gus Tomer',
-  phone: '12125556789'
+  phone: '12125556789',
 )
+
+puts customer_update
