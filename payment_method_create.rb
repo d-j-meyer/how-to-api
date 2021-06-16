@@ -1,9 +1,9 @@
 #Creates a PaymentMethod object.
 
-pm = require 'stripe'
+equire 'stripe'
 Stripe.api_key = 'INSERT_SECRET_KEY_HERE'
 
-Stripe::PaymentMethod.create({
+pm = Stripe::PaymentMethod.create({
   type: 'card',
   card: {
     number: '4242424242424242',
