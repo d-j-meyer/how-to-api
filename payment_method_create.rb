@@ -1,6 +1,6 @@
 #Creates a PaymentMethod object.
 
-require 'stripe'
+pm = require 'stripe'
 Stripe.api_key = 'INSERT_SECRET_KEY_HERE'
 
 Stripe::PaymentMethod.create({
@@ -12,3 +12,5 @@ Stripe::PaymentMethod.create({
     cvc: '314',
   },
 })
+
+puts pm
