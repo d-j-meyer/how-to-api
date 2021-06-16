@@ -1,6 +1,6 @@
 #Creates a PaymentMethod object.
 
-equire 'stripe'
+require 'stripe'
 Stripe.api_key = 'INSERT_SECRET_KEY_HERE'
 
 pm = Stripe::PaymentMethod.create({
